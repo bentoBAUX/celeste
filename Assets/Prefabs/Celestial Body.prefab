@@ -96,8 +96,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1
   spin: 1
-  destroy: 0
-  simulator: {fileID: 8895163790831893963, guid: e650927710745bf4fab6ff0e874dea8d, type: 3}
 --- !u!1 &6496101478508756222
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +203,7 @@ TrailRenderer:
   m_Time: 600
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.5
     widthCurve:
       serializedVersion: 2
       m_Curve:

@@ -15,41 +15,36 @@ public class Simulator : MonoBehaviour
     {
         celestialBodies = GameObject.FindGameObjectsWithTag("Celestial");
         InitialVelocity();
+
     }
 
     // Update is called once per frame
     private void FixedUpdate()
     {
         Gravity();
-        updateCBArray(planetName);
+        StartCoroutine(updateArray());
     }
 
-    void updateCBArray(string name)
+    IEnumerator updateArray()
     {
-        Debug.Log(celestialBodies.Length);
-        if (planetName != null)
+        foreach (GameObject a in celestialBodies)
         {
-            foreach (GameObject a in celestialBodies)
+            if (a.name == planetName)
             {
-                if (a.name == name)
-                {
-                    Debug.Log("Destroying: " + name);
-                    planetName = null;
-                }
-                else
-                {
-                    Debug.Log("Planet not found.");
-                    planetName = null;
-                    return;
-                }
+                Debug.Log("Destroying: " + a.name);
+                a.gameObject.SetActive(false);
+                System.Collections.Generic.List<GameObject> list = new System.Collections.Generic.List<GameObject>(celestialBodies);
+                list.Remove(a);
+                celestialBodies = list.ToArray();
+                yield return null;
+            }
+            else
+            {
+                Debug.Log("Planet not found");
+                yield return null;
             }
         }
-        else
-        {
-            return;
-        }
     }
-
 
 
     void Gravity()
