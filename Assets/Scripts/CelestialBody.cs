@@ -7,6 +7,7 @@ public class CelestialBody : MonoBehaviour
 {
     public float radius = 1f;
     public float spin = 1f;
+
     private void OnValidate()
     {
         this.transform.localScale = Vector3.one * radius;
@@ -14,6 +15,7 @@ public class CelestialBody : MonoBehaviour
     private void Update()
     {
         this.transform.Rotate(0, spin, 0);
+
     }
 
 }

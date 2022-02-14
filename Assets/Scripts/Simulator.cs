@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class C_Simulator : MonoBehaviour
+public class Simulator : MonoBehaviour
 {
-    GameObject[] celestialBodies;
+    public GameObject[] celestialBodies;
     public float OrbitMultiplier = 1.00f;
+
+    public string planetName = null;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +21,35 @@ public class C_Simulator : MonoBehaviour
     private void FixedUpdate()
     {
         Gravity();
-        Debug.Log(celestialBodies.Length);
+        updateCBArray(planetName);
     }
+
+    void updateCBArray(string name)
+    {
+        Debug.Log(celestialBodies.Length);
+        if (planetName != null)
+        {
+            foreach (GameObject a in celestialBodies)
+            {
+                if (a.name == name)
+                {
+                    Debug.Log("Destroying: " + name);
+                    planetName = null;
+                }
+                else
+                {
+                    Debug.Log("Planet not found.");
+                    planetName = null;
+                    return;
+                }
+            }
+        }
+        else
+        {
+            return;
+        }
+    }
+
 
 
     void Gravity()
@@ -34,7 +64,7 @@ public class C_Simulator : MonoBehaviour
                     float m2 = b.GetComponent<Rigidbody>().mass;
                     float r = Vector3.Distance(a.transform.position, b.transform.position);
 
-                    a.GetComponent<Rigidbody>().AddForce((b.transform.position - a.transform.position).normalized * (SL_Universe.C_gravitationalConstant * (m1 * m2)) / (r * r));
+                    a.GetComponent<Rigidbody>().AddForce((b.transform.position - a.transform.position).normalized * (Universe.gravitationalConstant * (m1 * m2)) / (r * r));
 
                 }
             }
@@ -53,7 +83,7 @@ public class C_Simulator : MonoBehaviour
                     float r = Vector3.Distance(a.transform.position, b.transform.position);
 
                     a.transform.LookAt(b.transform);
-                    a.GetComponent<Rigidbody>().velocity += (a.transform.right * Mathf.Sqrt((SL_Universe.C_gravitationalConstant * m2) / r) * OrbitMultiplier);
+                    a.GetComponent<Rigidbody>().velocity += (a.transform.right * Mathf.Sqrt((Universe.gravitationalConstant * m2) / r) * OrbitMultiplier);
 
                 }
             }
