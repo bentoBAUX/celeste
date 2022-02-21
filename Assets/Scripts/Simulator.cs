@@ -1,29 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Simulator : MonoBehaviour
 {
     public GameObject[] celestialBodies;
     public float OrbitMultiplier = 1.00f;
 
-    public string planetName = null;
+    string planetName = null;
+
+    public TMP_InputField TMP_planetName;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         celestialBodies = GameObject.FindGameObjectsWithTag("Celestial");
         InitialVelocity();
-
     }
 
-    // Update is called once per frame
     private void FixedUpdate()
     {
         Gravity();
+        planetName = TMP_planetName.text;
         StartCoroutine(updateArray());
     }
+
 
     IEnumerator updateArray()
     {
