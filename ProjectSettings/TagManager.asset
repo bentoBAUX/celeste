@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Celestial
   - Simulator
+  - Camera Holder
   layers:
   - Default
   - TransparentFX

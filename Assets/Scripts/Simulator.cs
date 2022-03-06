@@ -11,12 +11,16 @@ public class Simulator : MonoBehaviour
     string planetName = null;
 
     public TMP_InputField TMP_planetName;
+    public TMP_Dropdown dropdown;
+
+
 
 
     void Start()
     {
         celestialBodies = GameObject.FindGameObjectsWithTag("Celestial");
         InitialVelocity();
+        createDropDown();
     }
 
     private void FixedUpdate()
@@ -24,6 +28,18 @@ public class Simulator : MonoBehaviour
         Gravity();
         planetName = TMP_planetName.text;
         StartCoroutine(updateArray());
+    }
+
+    void createDropDown()
+    {
+        System.Collections.Generic.List<GameObject> listGO = new System.Collections.Generic.List<GameObject>(celestialBodies);
+        List<string> listName = new List<string>();
+        foreach (var name in listGO)
+        {
+            listName.Add(name.name);
+        }
+        dropdown.ClearOptions();
+        dropdown.AddOptions(listName);
     }
 
 

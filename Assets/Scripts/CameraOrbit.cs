@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class CameraOrbit : MonoBehaviour
 {
-    public Transform target;
+    Transform target;
     public float rotateSpeed;
     public bool orbit;
     void Update()
     {
+        target = this.gameObject.transform.parent;
         transform.LookAt(target);
         if (orbit)
         {
