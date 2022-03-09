@@ -301,7 +301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d268f8eb2f6084eb0a1bfcadecdf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 371430108}
 --- !u!114 &148313987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,6 +565,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca5a59b3bb8b1be40928c6cefd6983e2, type: 3}
+--- !u!1 &237722398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6496101478508756222, guid: ca5a59b3bb8b1be40928c6cefd6983e2, type: 3}
+  m_PrefabInstance: {fileID: 1934909628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &267860571
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,13 +946,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325311272}
-  m_LocalRotation: {x: 0.14222662, y: 0.43751818, z: -0.070351645, w: 0.885099}
-  m_LocalPosition: {x: 1431.34, y: 58, z: -29.7}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1568459854}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 18.26, y: 52.607, z: -0.005}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &325311274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1051,9 +1055,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49dabf762c2f97b4ea7cae3da588560d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 100, y: 100, z: 0}
   CB_size: {x: 0, y: 0, z: 0}
-  GO_toFocus: {fileID: 687698950}
+  GO_toFocus: {fileID: 237722398}
 --- !u!1001 &336429590
 PrefabInstance:
   m_ObjectHideFlags: 0
