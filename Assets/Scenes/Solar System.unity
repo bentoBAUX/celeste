@@ -407,17 +407,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8895163790831893961, guid: e650927710745bf4fab6ff0e874dea8d, type: 3}
   m_PrefabInstance: {fileID: 8895163791230302588}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &177397957 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8895163790831893963, guid: e650927710745bf4fab6ff0e874dea8d, type: 3}
-  m_PrefabInstance: {fileID: 8895163791230302588}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177397956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5eccafea8928d842b235ccd6a7bc5ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &177397958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,6 +565,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca5a59b3bb8b1be40928c6cefd6983e2, type: 3}
+--- !u!1 &237722398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6496101478508756222, guid: ca5a59b3bb8b1be40928c6cefd6983e2, type: 3}
+  m_PrefabInstance: {fileID: 1934909628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &267860571
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,7 +918,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_TargetDisplay: 1
+  m_TargetDisplay: 0
 --- !u!1 &325311272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,9 +1056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CB_size: {x: 0, y: 0, z: 0}
-  GO_toFocus: {fileID: 687698950}
-  simulator: {fileID: 177397957}
-  dropdown: {fileID: 1234489459}
+  GO_toFocus: {fileID: 237722398}
 --- !u!1001 &336429590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2411,8 +2403,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 325311277}
-        m_TargetAssemblyTypeName: CameraFocus, Assembly-CSharp
+      - m_Target: {fileID: 177397958}
+        m_TargetAssemblyTypeName: DropdownHandler, Assembly-CSharp
         m_MethodName: setFocus
         m_Mode: 1
         m_Arguments:
