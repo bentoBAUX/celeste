@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Celestial
+  - Simulator
+  - Camera Holder
   layers:
   - Default
   - TransparentFX
