@@ -13,6 +13,9 @@ public class Simulator : MonoBehaviour
     public TMP_InputField TMP_planetName;
     public TMP_Dropdown dropdown;
 
+    [Range(0.0f, 3.0f)]
+    public float timeScale;
+
 
 
 
@@ -30,6 +33,11 @@ public class Simulator : MonoBehaviour
         StartCoroutine(updateArray());
     }
 
+    private void Update()
+    {
+
+        Time.timeScale = timeScale;
+    }
     void createDropDown()
     {
         System.Collections.Generic.List<GameObject> listGO = new System.Collections.Generic.List<GameObject>(celestialBodies);
