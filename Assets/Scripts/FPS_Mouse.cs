@@ -10,7 +10,7 @@ public class FPS_Mouse : MonoBehaviour
     public Transform cameraHolder;
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()

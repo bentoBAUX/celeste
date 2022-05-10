@@ -14,7 +14,7 @@ public class CelestialBody : MonoBehaviour
     }
     private void Update()
     {
-        this.transform.Rotate(0, spin, 0);
+        this.transform.Rotate(0, 0, spin);
 
     }
 

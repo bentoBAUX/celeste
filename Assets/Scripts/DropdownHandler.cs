@@ -11,6 +11,6 @@ public class DropdownHandler : MonoBehaviour
     public void setFocus()
     {
         CB_name = dropdown.options[dropdown.value].text;
-        Debug.Log("Focusing: " + CB_name);
+        //Debug.Log("Focusing: " + CB_name);
     }
 }

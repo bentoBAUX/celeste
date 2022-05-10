@@ -8,16 +8,14 @@ public class Simulator : MonoBehaviour
     public GameObject[] celestialBodies;
     public float OrbitMultiplier = 1.00f;
 
-    string planetName = null;
+    public string planetName = null;
 
     public TMP_InputField TMP_planetName;
     public TMP_Dropdown dropdown;
 
+
     [Range(0.0f, 3.0f)]
     public float timeScale;
-
-
-
 
     void Start()
     {
@@ -29,14 +27,21 @@ public class Simulator : MonoBehaviour
     private void FixedUpdate()
     {
         Gravity();
-        planetName = TMP_planetName.text;
         StartCoroutine(updateArray());
     }
 
+
     private void Update()
     {
+        if (Input.GetKeyDown("c"))
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = timeScale;
+        }
 
-        Time.timeScale = timeScale;
     }
     void createDropDown()
     {

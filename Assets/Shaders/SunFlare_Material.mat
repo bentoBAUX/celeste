@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SunFlare_Material
+  m_Shader: {fileID: -6465566751694194690, guid: f1fb550fb6a690d40bf93f7ec3264f96, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_1cd036c1270441bd8d61f1ba6c4cdad8_Texture_1:
+        m_Texture: {fileID: 2800000, guid: f2cbcbda796b8144f862405e079dfac7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_b56e78dea5a345058f55d81e33415deb: 1.95
+    - Vector1_c5c8801448cc47788b12256f3c94e938: 0.89
+    - Vector1_e25525b723f345bf80c603a55b8af165: 50.53
+    - Vector1_ff2f983a01d94407a99d1407392ed588: 148.8
+    m_Colors:
+    - Color_5e8c3afdcdcd404db4350534db60b1e9: {r: 4.767974, g: 2.0113711, b: 1.1470125, a: 0}
+    - Color_62287e1f91ed48b8a51d021a0224e028: {r: 6.4222345, g: 4.508029, b: 0.84060675, a: 0}
+  m_BuildTextureStacks: []
