@@ -5,7 +5,7 @@ using UnityEngine;
 public class InitialVelocity : MonoBehaviour
 {
     Rigidbody rb;
-    Vector3 speed;
+    public Vector3 speed;
     // Start is called before the first frame update
     void Start()
     {

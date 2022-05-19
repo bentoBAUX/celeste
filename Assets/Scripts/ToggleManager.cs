@@ -10,6 +10,7 @@ public class ToggleManager : MonoBehaviour
     GameObject labelGO;
     public string CB_name;
     public Simulator simulator;
+
     public void getToggleParent()
     {
         parentGO = this.transform.parent;
@@ -19,4 +20,8 @@ public class ToggleManager : MonoBehaviour
 
         simulator.planetName = CB_name;
     }
+
+
 }
+
+
